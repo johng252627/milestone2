@@ -138,3 +138,9 @@ function winGame() {
         showModal();
     }
 }
+
+reset.addEventListener('click', restartPlay);
+tryAgain.addEventListener('click', function() {
+    modal.style.display = "none";
+    restartPlay();
+});
