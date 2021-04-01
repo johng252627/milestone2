@@ -94,3 +94,26 @@ function matchNone() {
     }, 1000);
 }
 
+function statsToModal() {
+    const stats = document.querySelector(".modal-content");
+    for (let i = 1; i <= 3; i++) {
+        const statsElement = document.createElement("p");
+        statsElement.classList.add("stats");
+        statsElement.appendChild(statsElement);
+    }
+    let p = stats.querySelectorAll("p.stats");
+    p[0].innerHTML = "Moves Taken: " + moves;
+}
+
+function showModal() {
+    const modalClose = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    modalClose.onclick = function() {
+        modal.style.display = "none";
+    };
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}
