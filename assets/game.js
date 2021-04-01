@@ -10,3 +10,8 @@ const reset = document.querySelector(".reset-btn");
 const tryAgain = document.querySelector(".play-again-btn");
 
 const trackMoves = document.querySelector(".moves");
+
+let revealed = [];
+let matched = [];
+
+let moves = 0;
