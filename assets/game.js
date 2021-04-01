@@ -15,3 +15,15 @@ let revealed = [];
 let matched = [];
 
 let moves = 0;
+
+function shuffle(array) {
+    let currentOrder = array.length, tempVal, randomOrder;
+    while (currentOrder !== 0) {
+        randomOrder = Math.floor(Math.random() * currentOrder);
+        currentOrder -= 1;
+        tempVal = array[currentOrder];
+        array[currentOrder] = array[randomOrder];
+        array[randomOrder] = tempVal;
+    }
+    return array;
+}
