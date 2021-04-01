@@ -112,3 +112,36 @@ ul > li {
      justify-content: space-around;
      align-items: center;  
  }
+
+ .card {
+    background: #ffc80f;
+    border-radius: 0.5em;
+    height: 7em;
+    width: 7em;
+ }
+
+ 
+
+ img {
+     user-select: none;
+     width: 6em;
+ }
+
+ .deck img {
+     visibility: hidden;
+ }
+
+ .deck .card.flip {
+     background: green;
+     transform: rotateY(180deg);
+     transition: transform 0.5s linear;
+ }
+
+ .flip img {
+     background: green;
+     visibility: visible;
+ }
+
+ .deck .card.match {
+     visibility: visible;
+ }
