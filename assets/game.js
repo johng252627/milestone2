@@ -40,3 +40,20 @@ function initGame() {
         deck.appendChild(liTag);
     }
 }
+
+initGame();
+
+function removeCard() {
+    while (deck.hasChildNodes()) {
+        deck.removeChild(deck.firstChild);
+    }
+}
+
+function restartPlay() {
+    moves = 0;
+    trackMoves.innerHTML = 0;
+    revealed = [];
+    matched = [];
+    removeCard();
+    initGame();
+}
