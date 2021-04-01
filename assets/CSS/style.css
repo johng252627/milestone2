@@ -88,3 +88,12 @@ ul > li {
      text-decoration: none;
      cursor: pointer;
  }
+
+ p.stats:last-child {
+     margin-bottom: 1em;
+ }
+
+ .play-again-btn {
+     background: #6ff27f;
+     margin-bottom: 1em;
+ }
