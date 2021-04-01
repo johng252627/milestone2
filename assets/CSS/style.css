@@ -17,3 +17,33 @@ body {
     margin: 0;
     text-align: center;
 }
+
+ul > li {
+    list-style: none;
+}
+
+.card,
+.reset-btn {
+    cursor: pointer;
+}
+ .btn{
+     border-radius: 1em;
+     border: none;
+     color: #6ff27f;
+     padding: 0.8em;
+ }
+
+ h1 {
+     font-size: 100px;
+     font-family: "Train One", sans-serif;
+ }
+
+ h3 {
+     font-size: 2em;
+     font-family: "Montserrat", sans-serif;
+ }
+
+ p {
+     font-size: 1.5 em;
+     font-family: "Montserrat", sans-serif;
+ }
