@@ -117,3 +117,10 @@ function showModal() {
         }
     };
 }
+
+function winGame() {
+    if (matched.length === 16) {
+        statsToModal();
+        showModal();
+    }
+}
