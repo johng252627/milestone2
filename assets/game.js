@@ -43,6 +43,20 @@ function initGame() {
 
 initGame();
 
+deck.addEventListener("click", function(event) {
+    function turnCard() {
+        const newLocal = "flip";
+        event.target.classList.add(newLocal);
+        addToRevealed();
+    }
+    function addToRevealed() {
+        if (revealed.length === 0 || revealed.length === 1) {
+            revealed.push(event.target.firstElementChild);
+       }
+        checkMatches();
+    }
+})
+
 function removeCard() {
     while (deck.hasChildNodes()) {
         deck.removeChild(deck.firstChild);
