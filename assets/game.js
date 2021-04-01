@@ -27,3 +27,16 @@ function shuffle(array) {
     }
     return array;
 }
+
+function initGame() {
+    console.log("START FUNCTION");
+    const shuffleAll = shuffle(cardDeck);
+    for (let i = 0; i < shuffleAll.length; i++) {
+        const liTag = document.createElement('LI');
+        liTag.classList.add('card');
+        const addImage = document.createElement('IMG');
+        liTag.appendChild(addImage);
+        addImage.setAttribute('src', `assets/images/${shuffleAll[i]}`);
+        deck.appendChild(liTag);
+    }
+}
