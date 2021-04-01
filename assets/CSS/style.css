@@ -1,1 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Train+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2edce;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 65%;
+    letter-spacing: 2px;
+    margin: 0;
+    text-align: center;
+}
