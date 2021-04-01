@@ -68,8 +68,29 @@ function checkMatches() {
         document.body.style.pointerEvents = "none";
     }
     if (revealed.length === 2 && revealed [0].src === revealed[1].src) {
-        match();
+        matchFound();
     } else if (revealed.length === 2 && revealed[0].src != revealed[1].src) {
-        noMatch();
+        matchNone();
     }
 }
+
+function matchFound() {
+    setTimeout(function() {
+        revealed[0].parentElement.classList.add("match");
+        revealed[1].parentElement.classList.add("match");
+        matched.push(...revealed);
+        document.body.style.pointerEvents = "auto";
+        winGame();
+        revealed = [];
+    }, 700);
+}
+
+function matchNone() {
+    setTimeout(function() {
+        revealed[0].parentElement.classList.remove("flip");
+        revealed[1].parentElement.classList.remove("flip");
+        document.body.style.pointerEvents = "auto";
+        revealed = [];
+    }, 1000);
+}
+
