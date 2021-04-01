@@ -57,3 +57,19 @@ function restartPlay() {
     removeCard();
     initGame();
 }
+
+function trackMovesMAde() {
+    trackMoves.innerHTML ++;
+    moves ++;
+}
+
+function checkMatches() {
+    if (revealed.length === 2) {
+        document.body.style.pointerEvents = "none";
+    }
+    if (revealed.length === 2 && revealed [0].src === revealed[1].src) {
+        match();
+    } else if (revealed.length === 2 && revealed[0].src != revealed[1].src) {
+        noMatch();
+    }
+}
